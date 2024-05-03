@@ -6,9 +6,10 @@ services:
     volumes:
       - ./www:/var/www/html
     ports:
-      - "8080:80"
+      - "80:80"
     depends_on:
       - db
+      
   db:
     build:
       context: .
