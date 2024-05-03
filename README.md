@@ -14,7 +14,7 @@
 - docker run --name dockerapp_db -e MYSQL_ROOT_PASSWORD=root -d dockerapp_sql:latest .
 
    Exécuter le conteneur PHP
-- docker run --name dockerapp_php --link dockerapp_sql:db -p 80:80 -d dockerapp_php:latest .
+- docker run --name dockerapp_php --link dockerapp_db:db -p 80:80 -d dockerapp_php:latest .
 
 
  # 2- Mise en place de Docker Compose : 
