@@ -87,9 +87,9 @@ docker compose up -d
 # Infos utiles : 
 Pour voir les contenaires actifs
 ```sh
-  docker ps
+docker ps
 ```
 Pour arreter les contenaires 
 ```sh
-  docker-compose down
+docker-compose down
 ```
