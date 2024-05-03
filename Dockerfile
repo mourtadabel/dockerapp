@@ -1,3 +1,4 @@
+# FROM php:${PHP_TAG}-apache
 FROM php:8.3-apache
 
 COPY www/ /var/www/html/
