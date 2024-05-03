@@ -2,8 +2,15 @@
 
 Afin de conteneuriser et faire tourner l'application en utilisant docker run, Merci de suivre ces étapes :
 
-- Cloner le projet 
-- Se placer sur la branche main
+- Cloner le projet
+- Vérifier si vous etes sur la branche main
+```sh
+git branch
+```
+- ou sinon
+```sh
+git checkout posgresql
+```
 - Saisir ces commandes :
   
 Pour construire l'image Docker pour PHP 
