@@ -44,6 +44,27 @@ docker compose up -d
   Afin de conteneuriser et faire tourner l'application en utilisant la dernière version de MySQL (8.3) et de PHP (8.3) , Merci de suivre ces étapes :
   
 - Se placer sur la branche dev
+```sh
+git checkout dev
+```
+- Saisir ces commandes :
+  
+Pour contruire les images de php et la base de données
+```sh
+docker compose build
+```
+Pour lancer les contenaires et assurer leur démarrage
+```sh
+docker compose up -d
+```
+
+ # 4- Branche PostgreSQL
+  Afin de conteneuriser et faire tourner l'application en utilisant un serveur de base de données PostgreSQL. Merci de suivre ces étapes :
+  
+- Se placer sur la branche posgresql
+```sh
+git checkout posgresql
+```
 - Saisir ces commandes :
   
 Pour contruire les images de php et la base de données
