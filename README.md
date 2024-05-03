@@ -1,8 +1,8 @@
  # 1 - Conteneurisation de l’application 
 
    Ajouter mes fichiers Dockerfile dans le dossier:
-  => un fichier Dockerfile-sql pour l'image db
-  => fichier Dockerfile pour l'image php
+  - un fichier Dockerfile-sql pour l'image db
+  - fichier Dockerfile pour l'image php
 
    Construire l'image Docker pour PHP 
 docker build -t dockerapp_php:latest -f Dockerfile
