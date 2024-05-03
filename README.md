@@ -9,7 +9,7 @@ git branch
 ```
 - ou sinon
 ```sh
-git checkout posgresql
+git checkout main
 ```
 - Saisir ces commandes :
   
