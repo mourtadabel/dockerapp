@@ -1,42 +1,43 @@
  # 1 - Conteneurisation de l’application 
 
-   Première étape est d'ajouter les fichiers Dockerfile dans le dossier:
-  - un fichier Dockerfile-sql pour la db
-  - un fichier Dockerfile pour php
+Afin de conteneuriser et faire tourner l'application en utilisant docker run, Merci de suivre ces étapes :
 
-
-   Ensuite construire l'image Docker pour PHP 
- ```sh
+- Cloner le projet 
+- Se placer sur la branche main
+- Saisir ces commandes :
+  
+Pour construire l'image Docker pour PHP 
+```sh
 docker build -t dockerapp_php:latest -f Dockerfile .
 ```
 
-  Construire l'image Docker pour la base de données 
-  ```sh
+Pour construire l'image Docker pour la base de données 
+```sh
 docker build -t dockerapp_sql:latest -f Dockerfile-sql .    
 ```
 
-   Exécuter le conteneur de base de données
+Pour exécuter le conteneur de base de données
 ```sh
 docker run --name dockerapp_sql -e MYSQL_ROOT_PASSWORD=root -d dockerapp_sql:latest  
 ```
 
-   Exécuter le conteneur PHP
+Pour exécuter le conteneur PHP
 ```sh
 docker run --name dockerapp_php --link dockerapp_sql:db -p 80:80 -d dockerapp_php:latest
 ``` 
 
  # 2- Mise en place de Docker Compose : 
 
-   Première étape est d'ajouter un fichier docker-compose.yml
-  - ce fichier contient mes différents services php et db
-    qui permet à mon contenaire php de communiquer avec le contenaire db
-    
-   Ensuite contruire mes images
-
-  - docker compose build
-  
-   lancer les contenaires et faire tourner l'application
-  - docker compose up -d
+ Afin de conteneuriser et faire tourner l'application en utilisant docker compose, Merci de saisir ces commandes :
+ 
+Pour contruire les images de php et la base de données
+```sh
+docker compose build
+```
+Pour lancer les contenaires et assurer leur démarrage
+```sh
+docker compose up -d
+```
 
 
 
