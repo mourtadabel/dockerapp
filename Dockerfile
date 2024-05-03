@@ -1,4 +1,6 @@
 # FROM php:${PHP_TAG}-apache
+
+# changement de version php
 FROM php:8.3-apache
 
 COPY www/ /var/www/html/

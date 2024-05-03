@@ -1,6 +1,7 @@
-FROM mysql:8.3
-
 # FROM mysql:${MYSQL_TAG}
+
+# changement de version mysql
+FROM mysql:8.3
 
 COPY ./database/gestion_produits.sql /docker-entrypoint-initdb.d/
 
