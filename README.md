@@ -1,11 +1,11 @@
  # 1 - Conteneurisation de l’application 
 
-   Ajouter mes fichiers Dockerfile dans le dossier:
+   Première étape est d'ajouter mes fichiers Dockerfile dans le dossier:
   - un fichier Dockerfile-sql pour la db
   - fichier Dockerfile pour php
 
 
-   Construire l'image Docker pour PHP 
+   Ensuite construire l'image Docker pour PHP 
 - docker build -t dockerapp_php:latest -f Dockerfile .
 
   Construire l'image Docker pour la base de données sql 
@@ -20,11 +20,11 @@
 
  # 2- Mise en place de Docker Compose : 
 
-   ajouter un fichier docker-compose.yml
+   Première étape est d'ajouter un fichier docker-compose.yml
   - ce fichier contient mes différents services php et db
     qui permet à mon contenaire php de communiquer avec le contenaire db
     
-   contruire mes images 
+   Ensuite contruire mes images 
   - docker compose build
   
    lancer les contenaires et faire tourner l'application
