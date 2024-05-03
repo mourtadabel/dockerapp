@@ -1,4 +1,4 @@
- 1 - Conteneurisation de l’application 
+ # 1 - Conteneurisation de l’application 
 
    Ajouter mes fichiers Dockerfile dans le dossier:
   => un fichier Dockerfile-sql pour l'image db
