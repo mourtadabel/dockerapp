@@ -31,7 +31,7 @@ docker run --name dockerapp_sql -e MYSQL_ROOT_PASSWORD=root -d dockerapp_sql:lat
 Pour exécuter le conteneur PHP
 ```sh
 docker run --name dockerapp_php --link dockerapp_sql:db -p 80:80 -d dockerapp_php:latest
-``` 
+```
 
  # 2- Mise en place de Docker Compose : 
 
@@ -64,6 +64,7 @@ Pour lancer les contenaires et assurer leur démarrage
 ```sh
 docker compose up -d
 ```
+NB: c'est possible aussi de faire tourner votre application avec le docker run comme dans l'exemple précedent (première partie) 
 
  # 4- Branche PostgreSQL
   Afin de conteneuriser et faire tourner l'application en utilisant un serveur de base de données PostgreSQL. Merci de suivre ces étapes :
@@ -82,6 +83,7 @@ Pour lancer les contenaires et assurer leur démarrage
 ```sh
 docker compose up -d
 ```
+NB: c'est possible aussi de faire tourner votre application avec le docker run comme dans l'exemple précedent (première partie) 
 
 
 # Infos utiles : 
