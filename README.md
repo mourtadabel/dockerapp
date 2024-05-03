@@ -6,17 +6,24 @@
 
 
    Ensuite construire l'image Docker pour PHP 
-docker build -t dockerapp_php:latest -f Dockerfile .   
+ ```sh
+docker build -t dockerapp_php:latest -f Dockerfile .
+```
 
-  Construire l'image Docker pour la base de données  
+  Construire l'image Docker pour la base de données 
+  ```sh
 docker build -t dockerapp_sql:latest -f Dockerfile-sql .    
+```
 
    Exécuter le conteneur de base de données
+```sh
 docker run --name dockerapp_sql -e MYSQL_ROOT_PASSWORD=root -d dockerapp_sql:latest  
+```
 
    Exécuter le conteneur PHP
+```sh
 docker run --name dockerapp_php --link dockerapp_sql:db -p 80:80 -d dockerapp_php:latest
-
+``` 
 
  # 2- Mise en place de Docker Compose : 
 
@@ -24,7 +31,8 @@ docker run --name dockerapp_php --link dockerapp_sql:db -p 80:80 -d dockerapp_ph
   - ce fichier contient mes différents services php et db
     qui permet à mon contenaire php de communiquer avec le contenaire db
     
-   Ensuite contruire mes images 
+   Ensuite contruire mes images
+
   - docker compose build
   
    lancer les contenaires et faire tourner l'application
