@@ -39,11 +39,29 @@ Pour lancer les contenaires et assurer leur démarrage
 docker compose up -d
 ```
 
-
+ # 3- Version de dev : mise à jour de la plate-forme
+ 
+  Afin de conteneuriser et faire tourner l'application en utilisant la dernière version de MySQL (8.3) et de PHP (8.3) , Merci de suivre ces étapes :
+  
+- Se placer sur la branche dev
+- Saisir ces commandes :
+  
+Pour contruire les images de php et la base de données
+```sh
+docker compose build
+```
+Pour lancer les contenaires et assurer leur démarrage
+```sh
+docker compose up -d
+```
 
 
 # Infos utiles : 
-on pourra voir mes contenaires avec : 
-  - docker ps
-on pourra arréter le contenaire avec :
-  - docker-compose down 
+Pour voir les contenaires actifs
+```sh
+  docker ps
+```
+Pour arreter les contenaires 
+```sh
+  docker-compose down
+```
